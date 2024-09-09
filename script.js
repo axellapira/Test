@@ -46,7 +46,7 @@ const nameLinks = {
     "saron ghebremeskel": ["Carmen Omitowoju (carmen.omitowoju@sjc.ox.ac.uk)"],
     "james kramer": ["Carmen Omitowoju (carmen.omitowoju@sjc.ox.ac.uk)"],
     "james harper-jones": ["Elena Radulova (elena.radulova@sjc.ox.ac.uk)", "Saskia Abou-khater Robbiati (saskia.abou-khaterrobbiati@sjc.ox.ac.uk)"],
-    "andras bard": ["Arran Kinnear (arran.kinnear@sjc.ox.ac.uk)", "Ben Smith (benjamin.smith@sjc.ox.ac.uk)", "Leandro Landolina (leandro.landolina@sjc.ox.ac.uk)"]
+    "andras bard": ["Arran Kinnear (arran.kinnear@sjc.ox.ac.uk)", "Ben Smith (benjamin.smith@sjc.ox.ac.uk)", "Leandro Landolina (leandro.landolina@sjc.ox.ac.uk)"],
     "cyrus/sin l chan": ["Yangchen Guan (yangchen.guan@sjc.ox.ac.uk)", "Burak Karatas (burak.karatas@sjc.ox.ac.uk)"],
     "cyrus l chan": ["Yangchen Guan (yangchen.guan@sjc.ox.ac.uk)", "Burak Karatas (burak.karatas@sjc.ox.ac.uk)"],
     "sin l chan": ["Yangchen Guan (yangchen.guan@sjc.ox.ac.uk)", "Burak Karatas (burak.karatas@sjc.ox.ac.uk)"],
