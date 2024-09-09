@@ -1,0 +1,138 @@
+/* General Styling */
+/* General Styling (remains the same) */
+body {
+    font-family: 'Papyrus', sans-serif;
+    background-color: #0f0d08; /* Dark background color fallback */
+    background-image: url('Untitled_Artwork (5).jpg'); /* Path to your background image */
+    background-size: cover; /* Ensures the image covers the entire page */
+    background-position: center 30%; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    color: #e1d7c5; /* Light text color */
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Media Query for Smartphones (600px and below) */
+@media only screen and (max-width: 1200px) {
+    body {
+        background-position: center 30%; /* Move the image lower by 20% */
+    }
+}
+
+/* Other styles (remain the same) */
+
+/* Centering the Main Container */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 400px;
+    margin: 0 auto;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Heading Styles */
+h1 {
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent dark background */
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    color: #e1d7c5; /* Light text color */
+    font-size: 2em;
+    margin-bottom: 20px;
+    font-weight: bold;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Form Styling */
+form {
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent dark brown background */
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    margin-bottom: 20px;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Input Styling */
+input[type="text"] {
+    width: 100%;
+    padding: 12px;
+    margin: 12px 0;
+    border: 1px solid #555; /* Dark border for contrast */
+    border-radius: 25px;
+    font-size: 1em;
+    box-sizing: border-box;
+    background-color: #333; /* Dark background for input */
+    color: #e1d7c5; /* Light text color */
+    transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus {
+    border-color: #e1d7c5; /* Focus border in light color */
+    outline: none;
+}
+
+/* Button Styling */
+button {
+    background-color: #4d1324; /* Dark red */
+    color: #e1d7c5; /* Light text color */
+    padding: 12px 25px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+    background-color: #761d37; /* Slightly lighter red */
+    transform: scale(1.05);
+}
+
+/* Output Text Styling */
+#output {
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent dark brown background */
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    margin-top: 20px;
+    font-size: 1.2em;
+    color: #e1d7c5; /* Light text color */
+    font-weight: normal;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Additional Styling for Images */
+img {
+    width: 100px;
+    margin-bottom: 20px;
+    border-radius: 50%;
+    border: 2px solid #000; /* Dark border */
+    transition: transform 0.3s ease;
+}
+
+img:hover {
+    transform: scale(1.1);
+}
+
+/* Link Styling */
+a {
+    color: #d4af37; /* Gold color for links */
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #c0a03e; /* Slightly darker gold */
+    text-decoration: underline;
+}
