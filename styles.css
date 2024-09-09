@@ -13,12 +13,6 @@ body {
     text-align: center;
 }
 
-/* Media Query for Smartphones (600px and below) */
-@media only screen and (max-width: 1200px) {
-    body {
-        background-position: center 30%; /* Move the image lower by 20% */
-    }
-}
 
 /* Other styles (remain the same) */
 
