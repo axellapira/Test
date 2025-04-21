@@ -264,9 +264,7 @@ body {
   transition: background-color 0.15s ease-in-out;
 }
 
-#place-order-btn:hover {
-  background-color: darken(var(--primary-color), 10%);
-}
+
 
 /* Order Book Toggle Button */
 #toggle-order-book-btn {
@@ -338,7 +336,7 @@ body {
 /* Default button style */
 .timeframe-btn {
   background-color: transparent;
-  color: white;
+  color: var(--text-color);
   border: none;
   font-size: 0.75em;
   padding: 4px 8px;
@@ -349,7 +347,7 @@ body {
 
 /* Active button style */
 .timeframe-btn.active {
-  background-color: white;
+  background-color: var(--text-color);
   color: var(--secondary-color);
   font-weight: bold;
 }
@@ -555,24 +553,52 @@ body {
 #logout-btn {
   
     background-color: var(--card-bg);
-    color: white;
+    color: var(--text-color);
     border: none;
-    font-size: 0.75em;
+    font-size: 1em;
     padding: 4px 8px;
     border-radius: var(--border-radius);
     cursor: pointer;
     transition: all 0.3s ease;
-    font-size: 1.2em;
+   
     
   
 }
+#help-btn {
+  
+  background-color: var(--card-bg);
+  color: var(--text-color);
+  border: none;
+  font-size: 1em;
+  padding: 4px 8px;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: all 0.3s ease;
+ 
+  
 
+}
 .positions-title{
   display: flex;
   justify-content: center;
   align-items: center;
   margin-bottom: 20px;
 
+}
+
+/* Responsive YouTube embed */
+.video-container {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  margin-top: 30px;
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  border: none;
 }
 
 

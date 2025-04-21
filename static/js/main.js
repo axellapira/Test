@@ -61,4 +61,27 @@ document.addEventListener('DOMContentLoaded', () => {
       alert('Logging out...');
     });
   }
+
+  // ----- Help Modal Functionality -----
+const helpBtn   = document.getElementById('help-btn');
+const helpModal = document.getElementById('help-modal');
+const helpClose = document.getElementById('help-close');
+
+if (helpBtn && helpModal && helpClose) {
+  // Open modal
+  helpBtn.addEventListener('click', () => {
+    helpModal.style.display = 'flex';
+  });
+  // Close when × clicked
+  helpClose.addEventListener('click', () => {
+    helpModal.style.display = 'none';
+  });
+  // Close when clicking outside content
+  helpModal.addEventListener('click', e => {
+    if (e.target === helpModal) {
+      helpModal.style.display = 'none';
+    }
+  });
+}
+
 });
