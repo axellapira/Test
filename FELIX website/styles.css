@@ -1,0 +1,304 @@
+/* styles.css */
+
+/* Palette */
+:root {
+  --color-green: #314d3d;
+  --color-beige: #e8e1d8;
+  --color-copper-1: #8f4a1a;
+  --color-copper-2: #552b11;
+}
+
+/* Reset & base */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 4rem; /* nav height */
+}
+body {
+  font-family:'GFS Didot' serif;
+  background: var(--color-beige);
+  color: var(--color-beige);
+}
+
+/* 2) Contact fallback styling */
+.contact-fallback {
+  margin-top: 1rem;
+  text-align: center;
+  font-size: clamp(0.9rem, 2vw, 1rem);
+  color: var(--color-green);
+}
+.contact-fallback a {
+  color: var(--color-copper-2);
+  text-decoration: underline;
+}
+
+/* NAVBAR */
+nav {
+  position: fixed; top: 0; left: 0; width: 100%;
+  background: linear-gradient(to right, var(--color-copper-1), var(--color-copper-2));
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  z-index: 1000;
+  transition: transform 0.3s ease;
+  display: flex; justify-content: center; padding: 0.5rem 1rem;
+}
+.nav-visible { transform: translateY(0); }
+.nav-hidden  { transform: translateY(-100%); }
+
+.nav__inner {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center; /* 🔥 Center the sub-divs horizontally */
+  gap: 0.6rem;
+}
+
+.nav__list {
+  list-style: none;
+  display: flex; flex-wrap: wrap; gap: 1rem;
+}
+.nav__link {
+  color: var(--color-beige);
+  text-decoration: none; font-weight: 500;
+}
+.nav__button {
+  background: #fff; color: var(--color-copper-2);
+  padding: 0.4rem 0.8rem; border-radius: 0.25rem;
+  text-decoration: none; font-weight: 500;
+}
+
+@media (min-width: 768px) {
+  nav {
+    padding: 0.6rem 2rem; /* Make nav bar thicker on desktop */
+  }
+  .nav__list {
+    gap: 3rem;
+     /* More space between nav links */
+   
+    margin-right: 2rem;
+  }
+  .nav__link {
+    font-size: 1.1rem; /* Make link text a bit bigger */
+  }
+  .nav__button {
+    font-size: 1.1rem;
+    padding: 0.6rem 1.2rem; /* Bigger button size */
+  }
+}
+
+
+/* HOME */
+.home-section {
+  position: relative; height: 100vh; overflow: hidden;
+}
+.half--top {
+  height: 50vh; background: var(--color-green);
+  display: flex; align-items: center; justify-content: center;
+  flex-direction: column;
+}
+.half--bottom {
+  height: 10vh; background: var(--color-beige);
+}
+.home-section__title {
+  font-size: clamp(2rem, 8vw, 4rem);
+  color: var(--color-beige);
+  font-weight: 100; /* normal weight, not bold */
+  letter-spacing: 0.05em; /* a little space between letters */
+}
+
+.home-section__name{
+  margin-top: 30px;
+  font-size: clamp(1.5rem, 6vw, 3rem);
+  color: var(--color-beige);
+  font-weight: 100; /* normal weight, not bold */
+  letter-spacing: 0.05em;
+
+}
+.portrait-wrapper {
+  position: absolute; top: 35%; left: 50%;
+  transform: translateX(-50%);
+  width: clamp(150px, 60vw, 400px);
+  aspect-ratio: 1;
+}
+
+.image-container {
+  position: relative;
+  width: 100%; height: 100%;
+}
+.portrait-image,
+.section__image {
+  display: block;
+  width: 100%; height: 100%;
+  object-fit: cover; position: relative; z-index: 1;
+}
+.shadow-block {
+  position: absolute;
+  left: clamp(-16px, -4vw, -32px); /* Shift shadow further left */
+  bottom: clamp(-16px, -4vw, -32px); /* Shift shadow further down */
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top left, var(--color-copper-1), var(--color-copper-2)); /* Now fades up/left */
+  z-index: 0;
+  
+}
+
+.intro-text {
+  position: absolute; bottom: 6.5rem; width: 100%; text-align: center;
+}
+@media (min-width: 768px) {
+  .intro-text {bottom: -2rem;}
+
+  .home-section {
+    margin-bottom:8rem;
+    overflow:visible;
+  }
+}
+.intro-text p {
+  color: var(--color-green);
+  font-size: clamp(0.9rem, 2vw, 1.1rem);
+}
+
+/* GENERIC SECTIONS */
+.section {
+  width: 100%;
+   padding: 5rem 1rem;
+}
+.container {
+  max-width: 1024px; margin: 0 auto;
+  display: flex; flex-direction: column; gap: 1rem;
+}
+@media (min-width: 768px) {
+  .section {
+    width: 100%;
+     padding: 5rem 0rem;
+  }
+  .container {
+    flex-direction: row;
+    align-items: center;
+  }
+  /* alternate left/right */
+  .layout-reverse .container {
+    flex-direction: row-reverse;
+  }
+  
+    
+}
+
+/* TEXT PANEL */
+.section__text {
+  flex: 1; background: var(--color-beige); padding: 1.5rem;
+}
+.section__text h2 {
+  margin-bottom: 1rem;
+  color: var(--color-green);
+  font-size: clamp(1.5rem, 5vw, 2rem);
+}
+.section__text p {
+  color: var(--color-green);
+  line-height: 1.6;
+}
+
+/* IMAGE PANEL */
+.section__image-wrapper {
+  flex: 1;
+  background: var(--color-green);
+  padding: 1.5rem;
+  display: flex; justify-content: center; align-items: center;
+}
+.section__image-wrapper .image-container {
+  width: clamp(150px, 40vw, 300px);
+  aspect-ratio: 1;
+}
+
+/* CONTACT */
+.contact-section {
+  background: var(--color-beige);
+}
+.contact-container {
+  max-width: 1024px; margin: 0 auto;
+  background: #fff; border-radius: 0.5rem;
+  padding: 2rem 1rem; box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+.contact-container h2 {
+  margin-bottom: 1rem;
+  color: var(--color-green);
+  font-size: clamp(1.5rem, 5vw, 2rem);
+}
+.contact-form {
+  display: flex; flex-direction: column; gap: 1rem;
+}
+.form-input,
+.form-textarea {
+  width: 100%; padding: 0.75rem;
+  border: 1px solid var(--color-green);
+  border-radius: 0.25rem;
+  background: transparent; color: var(--color-green);
+  font: inherit; font-size: 1rem;
+}
+.form-button {
+  align-self: flex-start;
+  padding: 0.75rem 1.5rem;
+  background: var(--color-green); color: var(--color-beige);
+  border: none; border-radius: 0.25rem;
+  cursor: pointer; font-size: 1rem;
+}
+.form-button:hover { opacity: 0.9; }
+
+/* Adjust home-section heights & portrait on desktop */
+@media (min-width: 768px) {
+  .half--top { height: 70vh; margin-top:-50px; }
+  .half--bottom { height: 40vh; }
+  .portrait-wrapper { top: 45%; }
+}
+
+/* Accessibility outlines */
+a:focus,
+button:focus,
+input:focus,
+textarea:focus {
+  outline: 2px solid var(--color-copper-1);
+  outline-offset: 2px;
+}
+
+#meet-me{
+  padding:0rem 1rem;
+}
+@media (min-width: 768px) {
+  #meet-me{
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+  }
+
+}
+
+  /* 1) Make the wrapper a positioning context */
+  .section__image-wrapper {
+    position: relative;
+    overflow: visible; /* let the pseudo bleed outside */
+  }
+
+  /* 2) Create the green bar behind the wrapper */
+  .section__image-wrapper::before {
+    content: "";
+    position: absolute;
+    top: 0; bottom: 0;
+    background: var(--color-green);
+    z-index: -1;
+  }
+
+  /* 3a) Non-reverse (image on the right): pseudo spans wrapper + right gutter */
+  .section:not(.layout-reverse) .section__image-wrapper::before {
+    left: 0;
+    /* (1024px − 100vw)/2 is negative once the viewport > 1024px,
+       so “right” becomes negative and stretches the bar into the gutter */
+    right: calc((1024px - 100vw) / 2);
+  }
+
+  /* 3b) Reverse (image on the left): pseudo spans wrapper + left gutter */
+  .section.layout-reverse .section__image-wrapper::before {
+    left: calc((1024px - 100vw) / 2);
+    right: 0;
+  }
+
+
+

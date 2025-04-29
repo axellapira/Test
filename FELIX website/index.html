@@ -1,0 +1,131 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Your Name — Psychotherapy</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href='https://fonts.googleapis.com/css?family=GFS Didot' rel='stylesheet'>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav id="navbar" class="nav nav-visible">
+    <div class="nav__inner">
+      <ul class="nav__list">
+        <li><a class="nav__link" href="#home">Home</a></li>
+        <li><a class="nav__link" href="#meet-me">Meet Me</a></li>
+        <li><a class="nav__link" href="#approach">Approach</a></li>
+        <li><a class="nav__link" href="#sessions">Sessions</a></li>
+      </ul>
+      <a class="nav__button" href="#contact">Contact</a>
+    </div>
+  </nav>
+
+  <main>
+
+    <!-- HOME -->
+    <section id="home" class="home-section">
+      <div class="half--top">
+        <h1 class="home-section__title">Title</h1>
+        <h2 class="home-section__name">Your Name</h2>
+      </div>
+      <div class="half--bottom"></div>
+
+      <div class="portrait-wrapper">
+        <div class="image-container">
+          <img class="portrait-image" src="portrait.jpg" alt="Portrait">
+          <div class="shadow-block"></div>
+        </div>
+      </div>
+
+      <div class="intro-text">
+        <p>A short tagline or introduction goes here.</p>
+      </div>
+    </section>
+
+    <!-- MEET ME (text left, image right) -->
+    <section id="meet-me" class="section">
+      <div class="container">
+        <div class="section__text">
+          <h2>Meet Me</h2>
+          <p>Your bio and background information here. wdciqwevdghcjqowieyfcbhdu iowqiwhebdhxuidoih wbehduixo2iuwedbxwerf w2hu2d1ioeudhx12geuido1 12eodgyx 1uyge  u1oeyd 2oefou2eb beor 2 uhb uhfb o2hrfou b2oeurf u2e rf</p>
+        </div>
+        <div class="section__image-wrapper">
+          <div class="image-container">
+            <img class="section__image" src="assets/marble.png" alt="Meet Me">
+            <div class="shadow-block"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- APPROACH (image left, text right at desktop) -->
+    <section id="approach" class="section layout-reverse">
+      <div class="container">
+        <div class="section__text">
+          <h2>Approach</h2>
+          <p>Describe your therapeutic approach here.</p>
+        </div>
+        <div class="section__image-wrapper">
+          <div class="image-container">
+            <img class="section__image" src="approach.jpg" alt="Approach">
+            <div class="shadow-block"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SESSIONS (text left, image right) -->
+    <section id="sessions" class="section">
+      <div class="container">
+        <div class="section__text">
+          <h2>Sessions</h2>
+          <p>Details about session formats, duration, fees, etc.</p>
+        </div>
+        <div class="section__image-wrapper">
+          <div class="image-container">
+            <img class="section__image" src="sessions.jpg" alt="Sessions">
+            <div class="shadow-block"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+<section id="contact" class="section contact-section">
+  <div class="contact-container">
+    <h2>Contact</h2>
+    <form class="contact-form"
+          action="mailto:you@yourdomain.com"
+          method="post"
+          enctype="text/plain">
+      <input class="form-input"
+             type="email"
+             name="email"
+             placeholder="Your Email"
+             required>
+      <textarea class="form-textarea"
+                name="message"
+                rows="5"
+                placeholder="Your Message"
+                required></textarea>
+      <button class="form-button" type="submit">Send Message</button>
+    </form>
+
+    <!-- fallback link if mailto doesn’t work -->
+    <p class="contact-fallback">
+      If this form doesn’t work, email me at
+      <a href="mailto:you@yourdomain.com">you@yourdomain.com</a>.
+    </p>
+  </div>
+</section>
+
+    
+
+  </main>
+
+  <script src="index.js"></script>
+</body>
+</html>
