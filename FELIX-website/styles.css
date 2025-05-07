@@ -124,11 +124,11 @@ nav {
   display: flex; align-items: center; justify-content: center;
   flex-direction: column;
   background-color: var(--color-green);
-  background-image: url('assets/marble.png');
+  background-image: url('assets/marble2.png');
   background-repeat: repeat;        /* tile it, or use no-repeat + cover if it’s large */
   background-size: auto;       /* or `auto` if you just want 1:1 */  
   /* background-blend-mode: multiply;     */
-  filter:saturate(1.2) brightness(1) contrast(0.9);
+  filter:saturate(1.1) brightness(1.2) contrast(0.9);
 }
 
 .half--bottom {
@@ -237,8 +237,12 @@ nav {
 .section__image-wrapper {
   flex: 1;
   background: var(--color-green);
+  background-image: url('assets/marble2.png');
+  background-repeat: repeat;        /* tile it, or use no-repeat + cover if it’s large */
+  background-size: auto;       
   padding: 1.5rem;
   display: flex; justify-content: center; align-items: center;
+  filter:saturate(1.1) brightness(1.2) contrast(0.9);
 }
 .section__image-wrapper .image-container {
   width: clamp(150px, 40vw, 300px);
@@ -257,6 +261,11 @@ nav {
 .contact-container h2 {
   margin-bottom: 1rem;
   color: var(--color-green);
+  /* background-image: url('assets/marble2.png');
+  background-repeat: repeat;        
+  background-size: auto;       
+  filter:saturate(1.1) brightness(1.2) contrast(0.9);
+   */
   font-size: clamp(1.5rem, 5vw, 2rem);
 }
 .contact-form {
@@ -310,16 +319,33 @@ textarea:focus {
   .section__image-wrapper {
     position: relative;
     overflow: visible; /* let the pseudo bleed outside */
+    background: transparent;
   }
 
   /* 2) Create the green bar behind the wrapper */
   .section__image-wrapper::before {
     content: "";
     position: absolute;
-    top: 0; bottom: 0;
-    background: var(--color-green);
+    top: 0;
+    bottom: 0;
+    background-image: url('assets/marble2.png');
+    background-repeat: repeat;
+    filter: saturate(1.1) brightness(1.2) contrast(0.9);
     z-index: -1;
+  
+    left: 0;
+    /* 
+      gutter = (1024px - 100vw)/2
+      clamp it so it’s never positive (which squeezes the bar) 
+      and never more negative than -50vw (just in case)
+    */
+    right: clamp(
+      0px, 
+      calc((1024px - 100vw) / 2), 
+      50vw
+    );
   }
+  
 
   /* 3a) Non-reverse (image on the right): pseudo spans wrapper + right gutter */
   .section:not(.layout-reverse) .section__image-wrapper::before {
@@ -335,6 +361,8 @@ textarea:focus {
     right: 0;
   }
 
+
+
   .textured-copper {
     background-color: var(--color-copper-1);
     background-image: var(--texture-copper);
@@ -345,3 +373,10 @@ textarea:focus {
   }
   
 
+  @media (max-width: 1024px) {
+    .section__image-wrapper::before {
+      left: 0 !important;
+      right: 0 !important;
+    }
+  }
+    
