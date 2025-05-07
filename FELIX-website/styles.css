@@ -66,6 +66,21 @@ nav {
   color: var(--color-beige);
   text-decoration: none; font-weight: 500;
 }
+
+/* highlight the current link */
+.nav__link.active {
+  /* example: underline in copper */
+  border-bottom: 2px solid var(--color-beige);
+  padding-bottom: 2px;      /* give the underline a little breathing room */
+  color: var(--color-beige);
+}
+
+/* keep the button styled but you can also highlight it */
+.nav__button.active {
+  outline: 2px solid var(--color-beige);
+} 
+
+
 .nav__button {
   background: #fff; color: var(--color-copper-2);
   padding: 0.4rem 0.8rem; border-radius: 0.25rem;
