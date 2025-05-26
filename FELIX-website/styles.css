@@ -6,9 +6,7 @@
   --color-beige: #e8e1d8;
   --color-copper-1: #8f4a1a;
   --color-copper-2: #552b11;
-}
-:root {
-  --texture-copper: url('coppertexture.jpg');
+   --texture-copper: url('coppertexture.jpg');
 }
 
 
