@@ -194,11 +194,17 @@ nav {
   position: absolute; width: 100%; text-align: center;
   /* Position quote exactly halfway between portrait bottom and Meet Me section */
   top: calc(40% + min(60vw, 400px) + 6vh);
+  /* Mobile: narrower width for better mobile layout */
+  max-width: 90%;
+  left: 50%;
+  transform: translateX(-50%);
 }
 @media (min-width: 768px) {
   .intro-text {
     /* On desktop, position quote exactly halfway between portrait bottom and Meet Me section */
     top: calc(50% + 400px + 9vh);
+    /* Desktop: wider width for better desktop layout */
+    max-width: 100%;
   }
 
   .home-section {
@@ -222,7 +228,7 @@ nav {
 /* GENERIC SECTIONS */
 .section {
   width: 100%;
-   padding: 5rem 1rem;
+   padding: 3rem 1rem;
 }
 .container {
   max-width: 1024px; margin: 0 auto;
@@ -428,7 +434,7 @@ textarea:focus {
 
 #meet-me{
   padding:0rem 1rem;
-  margin-top: 8rem;
+  margin-top: 0.5rem;
 }
 @media (min-width: 768px) {
   #meet-me{
