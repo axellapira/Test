@@ -192,13 +192,13 @@ nav {
 
 .intro-text {
   position: absolute; width: 100%; text-align: center;
-  /* Place quote just below the portrait: portrait top (40%) + portrait height (~60vw clamped to 400px) */
-  top: calc(40% + min(60vw, 400px) + 2.5rem);
+  /* Position quote exactly halfway between portrait bottom and Meet Me section */
+  top: calc(40% + min(60vw, 400px) + 6vh);
 }
 @media (min-width: 768px) {
   .intro-text {
-    /* On desktop, portrait top is 50% and size caps at 400px */
-    top: calc(50% + 400px + 2.5rem);
+    /* On desktop, position quote exactly halfway between portrait bottom and Meet Me section */
+    top: calc(50% + 400px + 9vh);
   }
 
   .home-section {
@@ -208,12 +208,12 @@ nav {
 }
 .intro-text p {
   color: var(--color-green);
-  font-size: clamp(0.9rem, 2vw, 1.1rem);
+  font-size: clamp(1.1rem, 2.5vw, 1.4rem);
   font-style: italic;
 }
 
 .intro-quote-author {
-  font-size: clamp(0.7rem, 1.5vw, 0.9rem) !important;
+  font-size: clamp(0.8rem, 1.8vw, 1rem) !important;
   font-style: normal !important;
   opacity: 0.8;
   margin-top: 0.5rem;
