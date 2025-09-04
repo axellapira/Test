@@ -84,3 +84,23 @@ const sectionObserver = new IntersectionObserver((entries) => {
 
 // start observing each section
 sections.forEach(section => sectionObserver.observe(section));
+
+// ── SCROLL-TRIGGERED ANIMATIONS ──────────────────────────────────────────────
+function animateOnScroll() {
+  const elements = document.querySelectorAll('.scroll-animate, .scroll-animate-left, .scroll-animate-right');
+  
+  elements.forEach(element => {
+    const elementTop = element.getBoundingClientRect().top;
+    const elementVisible = 150;
+    
+    if (elementTop < window.innerHeight - elementVisible) {
+      element.classList.add('animate');
+    }
+  });
+}
+
+// Run animation check on scroll
+window.addEventListener('scroll', animateOnScroll);
+
+// Run animation check on page load
+window.addEventListener('load', animateOnScroll);
