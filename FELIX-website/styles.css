@@ -193,11 +193,12 @@ nav {
 .intro-text {
   position: absolute; width: 100%; text-align: center;
   /* Position quote exactly halfway between portrait bottom and Meet Me section */
-  top: calc(40% + min(60vw, 400px) + 6vh);
+  top: calc(40% + 40vh + 20vw);
   /* Mobile: narrower width for better mobile layout */
   max-width: 90%;
   left: 50%;
   transform: translateX(-50%);
+  z-index: 1000;
 }
 @media (min-width: 768px) {
   .intro-text {
@@ -253,7 +254,7 @@ nav {
 
 /* TEXT PANEL */
 .section__text {
-  flex: 1; background: var(--color-beige); padding: 1.5rem;
+  flex: 1; background: rgba(232, 225, 216, 0.8); padding: 1.5rem;
 }
 .section__text h2 {
   margin-bottom: 1rem;
@@ -481,7 +482,7 @@ textarea:focus {
 }
 @media (min-width: 768px) {
   #meet-me{
-    margin-top: 12rem;
+    margin-top: 1rem;
     margin-bottom: 5rem;
   }
 
