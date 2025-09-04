@@ -276,13 +276,13 @@ nav {
   margin: 1rem 0 1.5rem 0;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 0.5rem;
+  gap: 0;
 }
 
 .approach-list li {
   color: var(--color-green);
   font-size: 0.95rem;
-  padding: 0.3rem 0;
+  padding: 0.1rem 0;
   position: relative;
   padding-left: 1.2rem;
 }
@@ -301,11 +301,12 @@ nav {
   flex: 1;
   background: var(--color-green);
   background-image: url('assets/marble2.png');
-  background-repeat: repeat;        /* tile it, or use no-repeat + cover if it’s large */
+  background-repeat: repeat;        /* tile it, or use no-repeat + cover if it's large */
   background-size: auto;       
-  padding: 1.5rem;
+  padding: 3rem 1.5rem;
   display: flex; justify-content: center; align-items: center;
   filter:saturate(1.1) brightness(1.2) contrast(0.9);
+  position: relative;
 }
 .section__image-wrapper .image-container {
   width: clamp(150px, 40vw, 300px);
@@ -319,13 +320,13 @@ nav {
 }
 
 #approach .section__image-wrapper .image-container {
-  width: clamp(150px, 40vw, 300px);
+  width: clamp(120px, 35vw, 250px);
   aspect-ratio: 0.5; /* Slightly taller for approach section with lots of content */
 }
 
 #sessions .section__image-wrapper .image-container {
-  width: clamp(150px, 40vw, 300px);
-  aspect-ratio: 0.8; /* Moderately taller for sessions section */
+  width: clamp(100px, 30vw, 400px);
+  aspect-ratio: 1.2; /* Shorter image for sessions section */
 }
 
 /* CONTACT */
@@ -433,8 +434,50 @@ textarea:focus {
 }
 
 #meet-me{
-  padding:0rem 1rem;
+  padding:3rem 1rem;
   margin-top: 0.5rem;
+}
+
+/* Make all sections have consistent padding */
+#approach,
+#sessions {
+  padding: 3rem 1rem;
+}
+
+/* All sections - align green background to start exactly where the title starts */
+#meet-me .section__image-wrapper::before,
+#approach .section__image-wrapper::before,
+#sessions .section__image-wrapper::before {
+  top: 0;
+  bottom: 0;
+}
+
+/* Meet Me section - standard size */
+#meet-me .section__image-wrapper {
+  padding: 1.5rem;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Approach section - make wrapper bigger */
+#approach .section__image-wrapper {
+  padding: 2rem;
+  height: 110%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Sessions section - shorter wrapper but start lower */
+#sessions .section__image-wrapper {
+  padding: 1.5rem;
+  height: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
 }
 @media (min-width: 768px) {
   #meet-me{
@@ -455,8 +498,8 @@ textarea:focus {
   .section__image-wrapper::before {
     content: "";
     position: absolute;
-    top: 0;
-    bottom: 0;
+    top: 1.5rem;
+    bottom: 1.5rem;
     background-image: url('assets/marble2.png');
     background-repeat: repeat;
     filter: saturate(1.1) brightness(1.2) contrast(0.9);
