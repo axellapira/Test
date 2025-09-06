@@ -289,7 +289,7 @@ nav {
 
 /* HOME */
 .home-section {
-  position: relative; height: 100vh; overflow: hidden;
+  position: relative; height: 100vh; overflow: visible;
 }
 /* .half--top {
   height: 50vh; background: var(--color-green);
@@ -658,8 +658,8 @@ textarea:focus {
 }
 @media (min-width: 768px) {
   #meet-me{
-    margin-top: 1rem;
-    margin-bottom: 5rem;
+    margin-top: 4rem;
+    margin-bottom: 0rem;
   }
 
 }
