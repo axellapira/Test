@@ -502,7 +502,7 @@ nav {
 }
 
 #sessions .section__image-wrapper .image-container {
-  width: clamp(100px, 30vw, 400px);
+  width: clamp(100px, 28vw, 360px);
   aspect-ratio: 1.2; /* Shorter image for sessions section */
 }
 
@@ -649,8 +649,8 @@ textarea:focus {
 
 /* Sessions section - shorter wrapper but start lower */
 #sessions .section__image-wrapper {
-  padding: 1.5rem;
-  height: 80%;
+  padding: 1.25rem;
+  height: 75%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -805,5 +805,23 @@ textarea:focus {
   font-weight: 100;
   letter-spacing: 0.05em;
   opacity: 0.8;
+}
+    
+
+/* Sessions responsive sizing */
+@media (min-width: 1024px) {
+  #sessions .section__image-wrapper .image-container {
+    width: clamp(120px, 24vw, 320px);
+  }
+}
+
+@media (max-width: 767px) {
+  #sessions .section__image-wrapper {
+    height: 90%;
+    padding: 1.75rem;
+  }
+  #sessions .section__image-wrapper .image-container {
+    width: clamp(180px, 60vw, 460px);
+  }
 }
     
