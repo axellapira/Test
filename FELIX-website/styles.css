@@ -374,7 +374,7 @@ nav {
   max-width: 90%;
   left: 50%;
   transform: translateX(-50%);
-  z-index: 1000;
+  
 }
 @media (min-width: 768px) {
   .intro-text {
@@ -400,6 +400,29 @@ nav {
   font-style: normal !important;
   opacity: 0.8;
   margin-top: 0.5rem;
+}
+
+/* SECTION DIVIDERS */
+.section-divider {
+  width: 100%;
+  padding: 2rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--color-beige);
+}
+
+.squiggle {
+  width: 100%;
+  max-width: 120px;
+  height: auto;
+  opacity: 0.6;
+  filter: brightness(0.8) saturate(1.2) sepia(1) hue-rotate(20deg) saturate(2);
+  transition: opacity 0.3s ease;
+}
+
+.squiggle:hover {
+  opacity: 0.8;
 }
 
 /* GENERIC SECTIONS */
@@ -880,6 +903,24 @@ textarea:focus {
 @media (min-width: 768px) {
   .footer__logo {
     height: 40px;
+  }
+  
+  .squiggle {
+    max-width: 150px;
+  }
+  
+  .section-divider {
+    padding: 2rem 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .squiggle {
+    max-width: 100px;
+  }
+  
+  .section-divider {
+    padding: 1.5rem 0;
   }
 }
     
