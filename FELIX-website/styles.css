@@ -305,8 +305,9 @@ nav {
   flex-direction: column;
   background-color: var(--color-green);
   background-image: url('assets/marble2.png');
-  background-repeat: repeat;        /* tile it, or use no-repeat + cover if it’s large */
-  background-size: auto;       /* or `auto` if you just want 1:1 */  
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
   /* background-blend-mode: multiply;     */
   filter:saturate(1.1) brightness(1.2) contrast(0.9);
 }
