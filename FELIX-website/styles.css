@@ -324,7 +324,7 @@ nav {
 
 /* Copperplate-style name treatment */
 .home-section__title { display: flex; gap: 0.25rem; align-items: baseline; flex-wrap: wrap; justify-content: center; }
-.home-section__title .initial { font-size: 1.2em; letter-spacing: 0.02em; text-transform: uppercase; }
+.home-section__title .initial { font-size: 1em; letter-spacing: 0.0em; text-transform: uppercase; }
 .home-section__title .rest { font-size: 0.85em; letter-spacing: 0.09em; text-transform: uppercase; opacity: 0.95; }
 .home-section__title .rest + .initial { margin-left: 0.4rem; }
 
@@ -528,7 +528,7 @@ nav {
 
 #approach .section__image-wrapper .image-container {
   width: clamp(120px, 35vw, 250px);
-  aspect-ratio: 0.6; /* Slightly taller for approach section with lots of content */
+  aspect-ratio: 0.57; /* Slightly taller for approach section with lots of content */
 }
 
 #sessions .section__image-wrapper .image-container {
